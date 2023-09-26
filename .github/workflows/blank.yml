@@ -8,3 +8,8 @@ jobs:
         run: echo "Hello World"
       - name: Print goodbye
         run: echo "Done - Bye"
+      - name: Job fail
+        continue-on-error: true
+        run: exit 1
+      - name: Next job
+        run: echo Hello
